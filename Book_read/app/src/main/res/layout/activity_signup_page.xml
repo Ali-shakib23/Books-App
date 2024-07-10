@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signupPage"
+    android:background="@color/backgroundHome">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+        <!-- presenting elements vertically         -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="183dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+
+            <!--username text field-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newUsername_id"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/lgin_edit"
+                android:hint="UserName"
+                android:padding="10dp"
+                android:textColorHint="@color/black"/>
+
+        <!--email textfield           -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newEmail"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/lgin_edit"
+                android:hint="email"
+                android:padding="10dp"
+                android:textColorHint="@color/black" />
+
+            <!--Address textfield            -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newAddress"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/lgin_edit"
+                android:hint="Address"
+                android:padding="10dp"
+                android:textColorHint="@color/black"/>
+
+            <!--password textfield   -->
+           <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/newPassword"
+                android:inputType="textPassword"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/lgin_edit"
+                android:hint="password"
+                android:padding="10dp"
+                android:textColorHint="@color/black"/>
+
+            <!--confirmimg password textfield   -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/confirmPasswordId"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/lgin_edit"
+                android:inputType="textPassword"
+                android:hint="confirm password"
+                android:padding="10dp"
+                android:textColorHint="@color/black" />
+
+<!--        sign up button thaht directs you to the login page after
+        filling the fields-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loginbtn"
+                android:text="Sign Up"
+                android:id="@+id/signUpAccount"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp" />
+
+
+        <!-- button that returns you back to the login page
+                 if you're already have an account-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginbtn"
+            android:background="@drawable/loginbtn"
+            android:text="Already Have an Account?"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

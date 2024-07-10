@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@color/backgroundHome">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="false"
+    android:orientation="vertical">
+
+<!--    //first text to be displayed in the homepage-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Welcome To your world"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#101010"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058"
+        tools:layout_editor_absoluteX="0dp" />
+
+<!--    search bar -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/lgin_edit"
+        android:hint="Search"
+        android:padding="10dp"
+        android:textColorHint="@color/black" />
+
+<!--   title for famous books -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Recent Books:"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#101010"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        tools:layout_editor_absoluteX="0dp" />
+    <!-- this layout for displaying four books vertically (each two books are
+       displayed horizantaly) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+<!--       two books displayed horizantaly -->
+<!--        <ImageView-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="285dp"-->
+<!--            android:layout_margin="20dp"-->
+
+<!--            android:src="@drawable/book1"/>-->
+        <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_editor_absoluteX="1dp"
+            app:layout_editor_absoluteY="1dp"
+            android:layout_centerHorizontal="true"
+            tools:listitem="@layout/book_layout" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="285dp"-->
+<!--            android:layout_margin="20dp"-->
+
+<!--            android:src="@drawable/book2" />-->
+    </LinearLayout>
+
+    <!--       two books displayed horizantaly -->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="@color/white"-->
+<!--        >-->
+<!--&lt;!&ndash;        <androidx.recyclerview.widget.RecyclerView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/recycleView"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="479dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_editor_absoluteX="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_editor_absoluteY="1dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            tools:listitem="@layout/book_layout" />&ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="285dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:src="@drawable/book3"/>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="285dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:src="@drawable/book4" />-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    Title for famous authors-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Famous Authors:"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#101010"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!--       two authors displayed horizantaly -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+
+            android:src="@drawable/person1"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/person2" />
+    </LinearLayout>
+
+    <!--       two authors displayed horizantaly -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:src="@drawable/person3"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/person4" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signout"
+        android:background="@color/btn"
+        android:text="sign out"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp" />
+
+
+</LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
